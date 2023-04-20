@@ -6,6 +6,155 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Segoe UI Symbol;
+}
+body {
+  background: #eff3f8;
+}
+.navbar {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.navbar__01 {
+  display: flex;
+  gap: 1rem;
+}
+.navbar__title {
+  font-size: x-large;
+  font-weight: bold;
+  color: rgb(85, 85, 216);
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.navbar__items {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-size: 0.8rem;
+}
+.n_item {
+  background: #fff;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+.n_item > p {
+  text-align: center;
+}
+.active {
+  font-weight: bold;
+  background: rgb(85, 85, 216);
+  color: #fff;
+}
+.navbar__notify {
+  font-size: 2rem;
+  color: rgb(85, 85, 216);
+  position: relative;
+}
+.navbar__notify::before {
+  content: '';
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  background: rgb(107, 205, 245);
+  position: absolute;
+  right: 0.1rem;
+  top: 0.4rem;
+}
+.navbar__notify::after {
+  content: '4';
+  font-size: 0.8rem;
+  border-radius: 50%;
+  color: #fff;
+  position: absolute;
+  right: 0.35rem;
+  top: 0.25rem;
+}
+.navbar__data {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.8rem;
+}
+.user__data {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+.user__name {
+  font-weight: bold;
+}
+.user__rol {
+}
+.navbar__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.n__image {
+  width: 2.3rem;
+  height: 2.5rem;
+  background: rgb(107, 205, 245);
+  border-radius: 50%;
+  object-fit: contain;
+  object-position: bottom;
+}
+
+.navbar__button {
+  display: none;
+  flex-direction: column;
+  gap: 0.2rem;
+  justify-content: center;
+  align-items: center;
+  width: 1rem;
+}
+.navbar__button > span {
+  background: rgb(85, 85, 216);
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+}
+
+#navbar__items2 {
+  transition: height 0.5s ease-in-out;
+  height: 0;
+  overflow: hidden;
+  margin: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: end;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+#navbar__items2.open {
+  height: auto;
+}
+.n_item.close {
+  display: none;
+}
+@media (max-width: 910px) {
+  .navbar__items {
+    display: none;
+  }
+  .navbar__button {
+    display: flex;
+  }
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
